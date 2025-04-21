@@ -48,7 +48,7 @@ Los resultados se mostrarán en el mapa, gráfico de barras y tabla.
 """)
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Creado por Javier Horacio Pérez Ricárdez")
+st.sidebar.caption("Creado por: Javier Horacio Pérez Ricárdez")
 
 # -----------------------------
 # Filtrado de datos
