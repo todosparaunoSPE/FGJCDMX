@@ -69,6 +69,7 @@ color_map = {
     'Extorsión': [255, 165, 0, 160]
 }
 data_filtrada['color'] = data_filtrada['Tipo de delito'].map(color_map)
+data_filtrada['Fecha_str'] = data_filtrada['Fecha'].dt.strftime("%d-%m-%Y")  # <-- Fix para tooltip
 
 # -----------------------------
 # Mapa interactivo con Pydeck
@@ -93,7 +94,7 @@ st.pydeck_chart(pdk.Deck(
         )
     ],
     tooltip={
-        "html": "<b>Delito:</b> {Tipo de delito}<br/><b>Alcaldía:</b> {Alcaldía}<br/><b>Fecha:</b> {Fecha}",
+        "html": "<b>Delito:</b> {Tipo de delito}<br/><b>Alcaldía:</b> {Alcaldía}<br/><b>Fecha:</b> {Fecha_str}",
         "style": {"backgroundColor": "steelblue", "color": "white"}
     }
 ))
