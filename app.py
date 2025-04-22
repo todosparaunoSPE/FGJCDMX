@@ -32,7 +32,7 @@ data = pd.DataFrame({
 # Interfaz Streamlit
 # -----------------------------
 st.set_page_config(page_title="Tablero Geoespacial FGJCDMX", layout="wide")
-st.title("📍 Tablero Geoespacial de Incidencia Delictiva - CDMX")
+st.title("📍 Tablero Geoespacial de Incidencia Delictiva - CDMX (con datos simulados)")
 
 st.sidebar.header("Filtros")
 alcaldia_sel = st.sidebar.multiselect("Selecciona alcaldías", options=alcaldias, default=alcaldias)
